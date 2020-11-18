@@ -1,0 +1,23 @@
+<!--pages/A-centrality/A-myConsume/A-myConsume.wxml-->
+<view class='container'>
+  <view class='line'></view>
+  <view class='basic_info'>
+
+    <view class='basic_info_in' style='margin-top:20rpx'>
+      <view class='basic_title'>
+        <view class='basic_title_in'>
+          <image src='../../../images/time-mes.png' class='basic_img'></image>
+          <view class='txt-in'>2017.11.28 17:00:00</view>
+        </view>
+        <view class='zhi'>支付成功</view>
+        <!-- <image src='../../images/arrow.png' class='arrow'></image> -->
+      </view>
+      <view class='x-line'></view>
+      <view class='basic_txt'>
+        <view class='basic_txt_title'>发起约茶</view>
+        <view class='basic_content'>￥199.00元</view>
+      </view>
+    </view>
+    
+  </view>
+</view>

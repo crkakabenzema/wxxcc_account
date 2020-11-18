@@ -1,0 +1,27 @@
+<!--pages/account/introduce/introduce.wxml-->
+<!--pages/A-introduceCompany/A-introduceCompany.wxml-->
+<view class='container'>
+  <form>
+    <view class='top'>
+      <view class='one_list'>
+        <view class=''>一句话介绍：</view>
+        <view>
+          <input placeholder="请输入一句话介绍（20字以内）" maxlength='20'></input>
+        </view>
+        <view class='x'>✖</view>
+      </view>
+    </view>
+
+    <view class='middle'>
+      <view class='middle_title'>项目介绍：</view>
+      <view class='area'>
+        <textarea/>
+        <view class='text_num'>0/1000</view>
+      </view>
+    </view>
+
+    <view class='btn'>下一步</view>
+    <view class='btn'>保存</view>
+  </form>
+
+</view>

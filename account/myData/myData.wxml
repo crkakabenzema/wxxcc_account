@@ -1,0 +1,89 @@
+<!--pages/A-centrality/A-myData/A-myData.wxml-->
+<view class='container'>
+  <view class='line'></view>
+  <view class='company-info'>
+    <view class='logo' catchtap='chooseHead'>
+      <block wx:if="{{userHead_img==''}}">
+        <view class='logo_img_logo'>Logo</view>
+        <image class='camera' src='../../../images/camera.png'></image>
+      </block>
+      <block wx:if="{{userHead_img!==''}}">
+      <image class='logo_img' src='{{userHead_img}}'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='basic_info'>
+    <view class='basic_info_in'>
+      <view class='basic_title' catchtap='toDataInfo'>
+        <view class='basic_title_in'>
+          <image src='../../../images/basic_info.png' class='basic_img'></image>
+          <view class='txt-in'>基本信息</view>
+        </view>
+        <image src='../../../images/arrow.png' class='arrow'></image>
+      </view>
+      <view class='x-line'></view>
+      <view class='basic_txt'>
+        <view>公司全称：</view>
+        <view>公司简称：</view>
+        <view>公司官网：</view>
+        <view>公司地址：</view>
+        <view>所属行业：</view>
+        <view>融资阶段：</view> 
+        <view>融资金额：</view>
+      </view>
+    </view>
+
+    <view class='basic_info_in' style='margin-top:20rpx'>
+      <view class='basic_title' catchtap='toIntroduceCompany'>
+        <view class='basic_title_in'>
+          <image src='../../../images/company_info.png' class='basic_img'></image>
+          <view class='txt-in'>企业介绍</view>
+        </view>
+        <image src='../../../images/arrow.png' class='arrow'></image>
+      </view>
+      <view class='x-line'></view>
+      <view class='basic_txt'>
+        <view>一句话介绍：</view>
+        <view>项目描述：</view>
+      </view>
+    </view>
+
+  </view>
+  <view class='line'></view>
+
+  <view class='license'>
+    <view class='license_title'>
+      <image src='../../../images/license.png' class='basic_img'></image>
+      <view class='txt-in'>上传营业执照</view>
+    </view>
+    <view class='upData'>
+      <view class='upTitle'>
+        <text style='color:#ed3f14'>*</text>上传名片</view>
+      <view class='up-img' catchtap='chooseCard'>
+        <block wx:if="{{card_img==''}}">
+          <image src='../../../images/upData.png'></image>
+          <view>点击上传名片</view>
+        </block>
+        <block wx:if="{{card_img!==''}}">
+          <image src='{{card_img}}'></image>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='bottom'>
+    <view class='btn' catchtap='submit'>提交审核</view>
+  </view>
+</view>
+
+<view class='modal' wx:if="{{isShow}}">
+  <view class='modal_box'></view>
+  <view class='modal_in'>
+    <view class='x' catchtap='close'>×</view>
+    <image src='../../../images/isUp.png'></image>
+    <view class='modal_txt'>您当前还未上传名片！</view>
+    <view class='modal_txt_t'>请先上传个人名片</view>
+    <view class='modal_bottom' catchtap='toUpLoad'>去上传</view>
+  </view>
+</view>

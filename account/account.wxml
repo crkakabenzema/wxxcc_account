@@ -1,0 +1,77 @@
+<!--pages/account/account.wxml-->
+<!--pages/user/user.wxml-->
+<view class='container'>
+  <view class='user-info' catchtap='toMyInfo'>
+  <view class='member'>
+    <image src='../../images/huang.png' class='huang'></image>
+    <view>成为会员</view>
+  </view>
+    <image src='../../images/user_img.png' class='userHead'></image>
+    <view style='margin-left: 37rpx'>
+      <view class='userName' wx:if="{{hasuserInfo!=false}}">
+        <text style='font-size:36rpx;font-weight: bold;margin-right:20rpx;color:black'>欢迎：{{userInfo.nickName}}</text></view>
+    </view>
+  </view>
+
+  <view class='mySetting'>
+    <view class='mySetting-in'>
+      <view class='mine' catchtap='toMyData'>
+        <view class='mine-in'>
+          <image src='../../images/ziliao.png' class='tubiao'></image>
+          <view>完善资料</view>
+        </view>
+        <view class='mine-in'>
+          <view style="color:#999">未认证</view>
+          <image src='../../images/question.png' class='question'></image>
+          <image src='../../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMyMessage'>
+        <view class='mine-in'>
+          <image src='../../images/xiaoxi.png' class='tubiao'></image>
+          <view>我的消息</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMyConsume'>
+        <view class='mine-in'>
+          <image src='../../images/xiaofei.png' class='tubiao'></image>
+          <view>我的消费</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='system'>
+    <view class='system-in'>
+      <view class='mine' catchtap='tel'>
+        <view class='mine-in'>
+          <image src='../../images/kefu.png' class='tubiao'></image>
+          <view>联系客服</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../../images/tel.png' class='tel'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMySetting'>
+        <view class='mine-in'>
+          <image src='../../images/shezhi.png' class='tubiao'></image>
+          <view>系统设置</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <button bindtap="userLogin" style="color:green">登录</button>
+</view>
